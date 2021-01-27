@@ -15,8 +15,8 @@ public class RenderSort : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //Debug.Log(pivot.position.y + " " +  player.position.y);
-        if(pivot.position.y < player.position.y)
+        Debug.Log(pivot.position.y + " " + player.position.y);
+        if (pivot.position.y < player.position.y)
         {
             spriteRenderer.sortingOrder = 1;
         }else
