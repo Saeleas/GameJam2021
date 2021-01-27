@@ -24,4 +24,5 @@ public class RenderSort : MonoBehaviour
             spriteRenderer.sortingOrder = -1;
         }
     }
+
 }
