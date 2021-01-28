@@ -12,6 +12,7 @@ public class MovementController : MonoBehaviour
     public Transform projectileOrigin;
     public float projectileSpawnDistance = 30.0f;
     private Vector2 lastDirection = Vector2.right;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
@@ -41,6 +42,7 @@ public class MovementController : MonoBehaviour
         if (Input.GetAxis("Fire1") > 0 && cooldownMs <= 0.0f)
         {
             cooldownMs = COOLDOWN;
+            animator.SetTrigger("Shot");
             GameObject projectile = Instantiate(projectilePrefab, transform.position + (new Vector3(lastDirection.x, lastDirection.y, 0.0f) * projectileSpawnDistance) , Quaternion.identity);
             ProjectileController controller = projectile.GetComponent<ProjectileController>();
             controller.direction = lastDirection;

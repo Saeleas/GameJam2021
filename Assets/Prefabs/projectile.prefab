@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 2173973857272906430}
   - component: {fileID: 1499078930711111758}
   - component: {fileID: 1273082397597658123}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: projectile
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -50,6 +50,8 @@ MonoBehaviour:
   body: {fileID: 1499078930711111758}
   force: 7
   spriteRenderer: {fileID: 4735089326330476814}
+  lifetime: 0.6
+  direction: {x: 0, y: 0}
 --- !u!50 &1499078930711111758
 Rigidbody2D:
   serializedVersion: 4
@@ -97,7 +99,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1630492288410019571}
   - component: {fileID: 4735089326330476814}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Circle
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -180,7 +182,7 @@ GameObject:
   - component: {fileID: 5779057014320202703}
   - component: {fileID: 5954108530552267024}
   - component: {fileID: 5144478222588637175}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Particle System
   m_TagString: Untagged
   m_Icon: {fileID: 0}
