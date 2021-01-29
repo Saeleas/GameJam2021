@@ -27,17 +27,17 @@ public class MovementController : MonoBehaviour
         float yAxis = Input.GetAxis("Vertical");
         int x = Math.Abs(xAxis) > MOVE_THRESHOLD ? Math.Sign(xAxis) : 0;
         int y = Math.Abs(yAxis) > MOVE_THRESHOLD ? Math.Sign(yAxis) : 0;
-        Vector2 direction = new Vector2(x, y);
-        lastDirection = direction != Vector2.zero ? direction : lastDirection;
         cooldownMs = Mathf.Clamp(cooldownMs - Time.deltaTime, 0.0f, float.MaxValue);
-
         //Debug.Log("x " + x + "y " + y);
         if (Math.Abs(x) > Math.Abs(y))
         {
             transform.position += new Vector3(x * speed * Time.deltaTime, 0.0f, 0.0f);
-        } else
+            lastDirection = new Vector2(x, 0.0f);
+        }
+        else if (Math.Abs(x) < Math.Abs(y))
         {
             transform.position += new Vector3(0.0f, y * speed * Time.deltaTime, 0.0f);
+            lastDirection = new Vector2(0.0f, y);
         }
         if (Input.GetAxis("Fire1") > 0 && cooldownMs <= 0.0f)
         {
