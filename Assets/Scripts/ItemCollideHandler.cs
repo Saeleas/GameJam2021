@@ -16,8 +16,11 @@ public class ItemCollideHandler : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
-        ParticleSystem particleSystem = other.gameObject.GetComponentInChildren<ParticleSystem>();
-        if (particleSystem)
-            particleSystem.Play();
+        if (other.gameObject.CompareTag("Player"))
+        {
+            ParticleSystem particleSystem = other.gameObject.GetComponentInChildren<ParticleSystem>();
+            if (particleSystem)
+                particleSystem.Play();
+        }
     }
 }

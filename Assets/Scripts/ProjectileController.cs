@@ -28,6 +28,10 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        Debug.Log("Projectile collided with" + collision);
+        //Debug.Log("Projectile collided with " + collision);
+        if (!collision.gameObject.CompareTag("Player"))
+        {
+            Debug.Log("Hit something that is not the player");
+        }
     }
 }

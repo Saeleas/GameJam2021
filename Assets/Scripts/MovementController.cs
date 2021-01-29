@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(DynamicObjectRenderSort))]
 public class MovementController : MonoBehaviour
@@ -10,12 +11,19 @@ public class MovementController : MonoBehaviour
     public float cooldownMs = 0.0f;
     public GameObject projectilePrefab;
     public Transform projectileOrigin;
+    public int playerHealth = 3;
     public float projectileSpawnDistance = 30.0f;
-    private Vector2 lastDirection = Vector2.right;
     public Animator animator;
+
+    private Vector2 lastDirection = Vector2.right;
+    private SpriteRenderer spriteRenderer;
+    private bool _canInteract;
+    public bool canInteract { get; set; }
+    
     // Start is called before the first frame update
     void Start()
     {
+        spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
 
@@ -33,19 +41,37 @@ public class MovementController : MonoBehaviour
         {
             transform.position += new Vector3(x * speed * Time.deltaTime, 0.0f, 0.0f);
             lastDirection = new Vector2(x, 0.0f);
+            spriteRenderer.flipX = x < 0;
+            
         }
         else if (Math.Abs(x) < Math.Abs(y))
         {
             transform.position += new Vector3(0.0f, y * speed * Time.deltaTime, 0.0f);
             lastDirection = new Vector2(0.0f, y);
         }
-        if (Input.GetAxis("Fire1") > 0 && cooldownMs <= 0.0f)
+        animator.SetInteger("x", x);
+        animator.SetInteger("y", y);
+        if (Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f)
         {
             cooldownMs = COOLDOWN;
             animator.SetTrigger("Shot");
             GameObject projectile = Instantiate(projectilePrefab, transform.position + (new Vector3(lastDirection.x, lastDirection.y, 0.0f) * projectileSpawnDistance) , Quaternion.identity);
             ProjectileController controller = projectile.GetComponent<ProjectileController>();
             controller.direction = lastDirection;
+        }
+
+        if (Input.GetButtonDown("Fire2") && canInteract)
+        {
+            Debug.Log("Maybe interact?");
+        }
+    }
+
+    public void hitPlayer(int damage)
+    {
+        playerHealth -= damage;
+        if (playerHealth <= 0)
+        {
+            SceneManager.LoadScene("Game Over");
         }
     }
 }
