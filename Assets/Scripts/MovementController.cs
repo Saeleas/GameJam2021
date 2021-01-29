@@ -51,7 +51,7 @@ public class MovementController : MonoBehaviour
         }
         animator.SetInteger("x", x);
         animator.SetInteger("y", y);
-        if (Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f)
+        if (!PauseMenu.isPaused && Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f)
         {
             cooldownMs = COOLDOWN;
             animator.SetTrigger("Shot");
