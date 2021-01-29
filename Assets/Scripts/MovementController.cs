@@ -18,6 +18,8 @@ public class MovementController : MonoBehaviour
     private Vector2 lastDirection = Vector2.right;
     private SpriteRenderer spriteRenderer;
     private bool _canInteract;
+    internal InteractableComponent interactable;
+
     public bool canInteract { get; set; }
     
     // Start is called before the first frame update
@@ -59,10 +61,11 @@ public class MovementController : MonoBehaviour
             ProjectileController controller = projectile.GetComponent<ProjectileController>();
             controller.direction = lastDirection;
         }
-
+        
         if (Input.GetButtonDown("Fire2") && canInteract)
         {
             Debug.Log("Maybe interact?");
+            interactable.dissolve();
         }
     }
 
