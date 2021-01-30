@@ -5387,7 +5387,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distances:
-  - {x: 0.75, y: 0.75}
+  - {x: 0.9, y: 0.9}
 --- !u!4 &219264489
 Transform:
   m_ObjectHideFlags: 0
@@ -6238,7 +6238,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 2
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
