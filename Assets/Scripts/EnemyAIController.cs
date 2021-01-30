@@ -35,6 +35,10 @@ public class EnemyAIController : AIController
         if (other.gameObject.CompareTag("Player") || other.gameObject.GetComponent<ProjectileController>() != null)
         {
             animator.SetBool("explode", true);
+            if (other.gameObject.CompareTag("Player"))
+            {
+                other.gameObject.GetComponent<Animator>().SetTrigger("hit");
+            }
         }
     }
     // protected new void OnTriggerEnter2D(Collider2D other)
