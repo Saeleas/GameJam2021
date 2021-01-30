@@ -9,6 +9,7 @@ public class DialogueTrigger : MonoBehaviour
     public GameObject container;
     public Dialogue dialogue;
     public bool startOnLoad;
+    public Animator animator;
     
     private DialogueManager _manager;
     private Queue<Line> _lines;
@@ -40,11 +41,22 @@ public class DialogueTrigger : MonoBehaviour
             Line line = _lines.Dequeue();
             _manager.trigger = this;
             _manager.line = line;
+
+            if (animator)
+            {
+                _manager.animator = animator;
+            }
+            
             StartCoroutine(_manager.HandleStart());
         }
         else
         {
             container.SetActive(false);
+            
+            if (animator)
+            {
+                animator.speed = 1f;
+            }
         }
     }
 }

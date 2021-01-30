@@ -10,6 +10,8 @@ public class DialogueManager : MonoBehaviour
     public DialogueTrigger trigger;
     [HideInInspector]
     public Line line;
+    [HideInInspector] 
+    public Animator animator;
     
     public Text nameText;
     public Image playerArtworkImage;
@@ -35,12 +37,29 @@ public class DialogueManager : MonoBehaviour
     
     public IEnumerator HandleStart()
     {
+        if (animator)
+        {
+            animator.speed = 0;
+        }
+        
         nameText.text = line.name;
 
         if (line.delay > 0)
         {
             gameObject.SetActive(false);
+
+            if (animator)
+            {
+                animator.speed = 1f;
+            }
+            
             yield return new WaitForSeconds(line.delay);
+            
+            if (animator)
+            {
+                animator.speed = 0;
+            }
+            
             gameObject.SetActive(true);
         }
         

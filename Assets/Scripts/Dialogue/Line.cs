@@ -14,5 +14,5 @@ public class Line : ScriptableObject
     [TextArea(1, 4)]
     public string[] sentences;
 
-    public int delay;
+    public float delay;
 }
