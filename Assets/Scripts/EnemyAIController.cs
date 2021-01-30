@@ -38,6 +38,7 @@ public class EnemyAIController : AIController
             if (other.gameObject.CompareTag("Player"))
             {
                 other.gameObject.GetComponent<Animator>().SetTrigger("hit");
+                other.gameObject.GetComponent<MovementController>().hitPlayer(1);
             }
         }
     }
