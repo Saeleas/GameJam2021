@@ -4,12 +4,23 @@ using UnityEngine;
 
 public class FriendAIController : AIController
 {
+
+    private SpriteRenderer spriteRender;
+    private Animator animator;
+
+    private void Start()
+    {
+        spriteRender = GetComponentInChildren<SpriteRenderer>();
+        animator = GetComponent<Animator>();
+    }
     // Update is called once per frame
     void Update()
     {
         if (shouldFollow)
         {
             Vector3 direction = player.transform.position - gameObject.transform.position;
+            spriteRender.flipX = direction.x < 0.0f;
+            animator.SetBool("moving", direction != Vector3.zero); 
             if (direction.x - distance.x >= 0)
             {
                 gameObject.transform.position += new Vector3(speed * Time.deltaTime * (direction.x - distance.x), 0);

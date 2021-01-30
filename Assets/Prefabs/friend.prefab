@@ -59,6 +59,7 @@ GameObject:
   - component: {fileID: 1092075551025822062}
   - component: {fileID: 1092075551025822063}
   - component: {fileID: 7378312423271085361}
+  - component: {fileID: 6621927579843350248}
   m_Layer: 0
   m_Name: friend
   m_TagString: Untagged
@@ -75,7 +76,7 @@ Transform:
   m_GameObject: {fileID: 1092075551025822059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1092075551072415579}
   - {fileID: 1092075549454092133}
@@ -134,6 +135,25 @@ MonoBehaviour:
   speed: 4.5
   distance: {x: 0.5, y: 0.5}
   shouldFollow: 0
+--- !u!95 &6621927579843350248
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092075551025822059}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: c7152bdfb60346e4d8f13d8193d311ac, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1092075551072415578
 GameObject:
   m_ObjectHideFlags: 0
@@ -161,7 +181,7 @@ Transform:
   m_GameObject: {fileID: 1092075551072415578}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
   m_Children: []
   m_Father: {fileID: 1092075551025822060}
   m_RootOrder: 0
@@ -206,7 +226,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 8cfb555753b801642814deb8434b5b59, type: 3}
+  m_Sprite: {fileID: 21300000, guid: d5decc1c6fc538740a73aec594f85c92, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 1
   m_FlipY: 0
@@ -325,7 +345,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.17
+  m_FalloffIntensity: 0.41
   m_Color: {r: 0.81470275, g: 0.8490394, b: 0.8679245, a: 1}
   m_Intensity: 0.85
   m_LightVolumeOpacity: 0.16
