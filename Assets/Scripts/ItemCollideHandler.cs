@@ -21,6 +21,7 @@ public class ItemCollideHandler : MonoBehaviour
             ParticleSystem particleSystem = other.gameObject.GetComponentInChildren<ParticleSystem>();
             if (particleSystem)
                 particleSystem.Play();
+            Destroy(gameObject);
         }
     }
 }
