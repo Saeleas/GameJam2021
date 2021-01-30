@@ -15,6 +15,7 @@ public class MovementController : MonoBehaviour
     public int playerHealth = 3;
     public float projectileSpawnDistance = 30.0f;
     public Animator animator;
+    public LifeContainerManager lifeContainer;
 
     private Vector2 lastDirection = Vector2.right;
     private SpriteRenderer spriteRenderer;
@@ -27,6 +28,7 @@ public class MovementController : MonoBehaviour
     void Start()
     {
         spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+        lifeContainer.Init(playerHealth, playerHealth);
     }
 
 
@@ -77,6 +79,7 @@ public class MovementController : MonoBehaviour
     public void hitPlayer(int damage)
     {
         playerHealth -= damage;
+        lifeContainer.SetCurrentLife(playerHealth);
         if (playerHealth <= 0)
         {
             SceneManager.LoadScene("Game Over");
