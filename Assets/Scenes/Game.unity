@@ -5292,7 +5292,7 @@ BoxCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0.0052671134, y: -0.2764671}
+  m_Offset: {x: 0.01485002, y: -0.3917694}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
@@ -5303,7 +5303,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.5439438, y: 0.18045157}
+  m_Size: {x: 0.67418313, y: 0.24901962}
   m_EdgeRadius: 0
 --- !u!50 &219264484
 Rigidbody2D:
@@ -5399,7 +5399,6 @@ Transform:
   m_Children:
   - {fileID: 465223055}
   - {fileID: 519420032}
-  - {fileID: 1307207429}
   - {fileID: 1785667983}
   - {fileID: 1190990172}
   - {fileID: 820904550}
@@ -5973,7 +5972,8 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1307207429}
   m_Father: {fileID: 219264489}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -6076,7 +6076,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.08235294, g: 0.08627451, b: 0.06666667, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -6473,7 +6473,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 219264489}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!70 &820904551
 CapsuleCollider2D:
@@ -7261,7 +7261,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 219264489}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1220181792
 GameObject:
@@ -7597,8 +7597,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 219264489}
-  m_RootOrder: 2
+  m_Father: {fileID: 465223055}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1307207430
 MonoBehaviour:
@@ -7670,7 +7670,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 219264489}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &1311822994
 MonoBehaviour:
@@ -8855,7 +8855,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 219264489}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: -90, y: 0, z: 0}
 --- !u!199 &1785667984
 ParticleSystemRenderer:
@@ -13859,8 +13859,11 @@ PolygonCollider2D:
       - {x: 0.45857477, y: -14.1860485}
       - {x: -2.6655886, y: -14.471005}
       - {x: -3.2199883, y: -14.388413}
-      - {x: -3.660293, y: -14.320577}
-      - {x: -4.942575, y: -13.767888}
+      - {x: -3.686281, y: -14.34437}
+      - {x: -4.11438, y: -14.191443}
+      - {x: -4.468756, y: -13.967579}
+      - {x: -5.1508036, y: -13.5407915}
+      - {x: -5.5713763, y: -13.134161}
       - {x: -6.0496807, y: -12.816839}
       - {x: -4.988475, y: -11.560642}
       - {x: -3.7765994, y: -10.907434}
