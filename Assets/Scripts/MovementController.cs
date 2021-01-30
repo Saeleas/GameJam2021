@@ -43,8 +43,8 @@ public class MovementController : MonoBehaviour
         {
             transform.position += new Vector3(x * speed * Time.deltaTime, 0.0f, 0.0f);
             lastDirection = new Vector2(x, 0.0f);
-            spriteRenderer.flipX = x < 0;
-            
+            spriteRenderer.flipX = x >= 0;
+
         }
         else if (Math.Abs(x) < Math.Abs(y))
         {
@@ -53,8 +53,10 @@ public class MovementController : MonoBehaviour
         }
         animator.SetInteger("x", x);
         animator.SetInteger("y", y);
+        animator.SetBool("headless", cooldownMs > 0.0f);
         if (!PauseMenu.isPaused && Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f)
         {
+            animator.SetBool("headless", true);
             cooldownMs = COOLDOWN;
             animator.SetTrigger("Shot");
             GameObject projectile = Instantiate(projectilePrefab, transform.position + (new Vector3(lastDirection.x, lastDirection.y, 0.0f) * projectileSpawnDistance) , Quaternion.identity);
