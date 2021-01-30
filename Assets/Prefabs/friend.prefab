@@ -59,7 +59,7 @@ GameObject:
   - component: {fileID: 1092075551025822062}
   - component: {fileID: 1092075551025822063}
   - component: {fileID: 7378312423271085361}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: friend
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -75,7 +75,7 @@ Transform:
   m_GameObject: {fileID: 1092075551025822059}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -4.401, y: -1.92, z: 0}
-  m_LocalScale: {x: 0.7, y: 0.7, z: 1}
+  m_LocalScale: {x: 0.25, y: 0.25, z: 1}
   m_Children:
   - {fileID: 1092075551072415579}
   - {fileID: 1092075549454092133}
@@ -143,7 +143,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1092075551072415579}
   - component: {fileID: 1092075551072415580}
-  m_Layer: 6
+  - component: {fileID: 5771165501300369582}
+  m_Layer: 0
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -215,6 +216,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!58 &5771165501300369582
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1092075551072415578}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Radius: 0.5
 --- !u!1 &6650883856450862574
 GameObject:
   m_ObjectHideFlags: 0
@@ -225,7 +242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6822385634378280931}
   - component: {fileID: 4094029203172130407}
-  m_Layer: 6
+  m_Layer: 0
   m_Name: fov
   m_TagString: Untagged
   m_Icon: {fileID: 0}

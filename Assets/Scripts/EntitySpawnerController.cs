@@ -17,8 +17,7 @@ public class EntitySpawnerController : MonoBehaviour
             //GetComponent<Collider2D>()
             Bounds bounds = GetComponent<Collider2D>().bounds;
             Vector3 randomPosition = Random.insideUnitSphere;
-            randomPosition.Scale(bounds.size);
-            randomPosition.Scale(new Vector3(.5f, .5f));
+            randomPosition.Scale(bounds.extents);
             AIController controller =  Instantiate(entity, bounds.center + randomPosition, Quaternion.Euler(0,0,0)).GetComponent<AIController>();
             controller.player = player;
             controller.speed = Random.Range(speed[0], speed[1]);
