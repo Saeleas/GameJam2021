@@ -2,19 +2,8 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class FriendAIController : MonoBehaviour
+public class FriendAIController : AIController
 {
-    public bool shouldFollow = true;
-    public float speed = 1;
-    public Vector2 distance = new Vector2(.75f, .75f);
-    public GameObject player;
-
-    // Start is called before the first frame update
-    void Start()
-    {
-
-    }
-
     // Update is called once per frame
     void Update()
     {
@@ -37,6 +26,13 @@ public class FriendAIController : MonoBehaviour
             {
                 gameObject.transform.position -= new Vector3(0, speed * Time.deltaTime * Mathf.Abs(direction.y + distance.y));
             }
+        }
+    }
+    protected new void OnTriggerEnter2D(Collider2D other) {
+        base.OnTriggerEnter2D(other);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.GetComponent<FriendsFoundController>().AddFriend(this);
         }
     }
 }
