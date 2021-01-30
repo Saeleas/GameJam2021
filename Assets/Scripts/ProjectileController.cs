@@ -32,6 +32,10 @@ public class ProjectileController : MonoBehaviour
         if (!collision.gameObject.CompareTag("Player"))
         {
             Debug.Log("Hit something that is not the player");
+            if (collision.gameObject.CompareTag("Enemy"))
+            {
+                Destroy(collision.gameObject.gameObject);
+            }
         }
     }
 }

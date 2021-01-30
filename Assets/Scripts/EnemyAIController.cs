@@ -30,17 +30,17 @@ public class EnemyAIController : AIController
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.CompareTag("Player"))
+        if (other.gameObject.CompareTag("Player") || other.gameObject.GetComponent<ProjectileController>() != null)
         {
             Destroy(gameObject);
         }
     }
-    protected new void OnTriggerEnter2D(Collider2D other)
-    {
-        base.OnTriggerEnter2D(other);
-        if (other.gameObject.GetComponent<ProjectileController>() != null)
-        {
-            Destroy(gameObject);
-        }
-    }
+    // protected new void OnTriggerEnter2D(Collider2D other)
+    // {
+    //     base.OnTriggerEnter2D(other);
+    //     if ()
+    //     {
+    //         Destroy(gameObject);
+    //     }
+    // }
 }
