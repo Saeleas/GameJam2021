@@ -5353,7 +5353,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   COOLDOWN: 2
   MOVE_THRESHOLD: 0.4
-  speed: 5
+  speed: 2
   cooldownMs: 0
   projectilePrefab: {fileID: 4713040332692110158, guid: 52276109080f1824da467a2fc848d18e, type: 3}
   projectileOrigin: {fileID: 1190990172}
