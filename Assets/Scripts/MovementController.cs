@@ -71,8 +71,8 @@ public class MovementController : MonoBehaviour
 
         if (Input.GetButtonDown("Fire2") && canInteract)
         {
-            //Debug.Log("Maybe interact?");
-            interactable.dissolve();
+            // Maybe interact?
+            interactable.Dissolve();
         }
     }
 
