@@ -1,6 +1,7 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Threading;
 using UnityEngine;
 using UnityEngine.UI;
 public class DialogueManager : MonoBehaviour
@@ -29,23 +30,31 @@ public class DialogueManager : MonoBehaviour
             sentenceText.text += letter;
             yield return null;
         }
+        _isAnimating = false;
     }
     
-    public void HandleStart()
+    public IEnumerator HandleStart()
     {
         nameText.text = line.name;
 
+        if (line.delay > 0)
+        {
+            gameObject.SetActive(false);
+            yield return new WaitForSeconds(line.delay);
+            gameObject.SetActive(true);
+        }
+        
         if (line.isPlayer)
         {
+            npcArtworkImage.gameObject.SetActive(false);
             playerArtworkImage.gameObject.SetActive(true);
             playerArtworkImage.sprite = line.artwork;
-            npcArtworkImage.gameObject.SetActive(false);
         }
         else
         {
+            playerArtworkImage.gameObject.SetActive(false);
             npcArtworkImage.gameObject.SetActive(true);
             npcArtworkImage.sprite = line.artwork;
-            playerArtworkImage.gameObject.SetActive(false);
         }
         
         _sentences = new Queue<string>();
