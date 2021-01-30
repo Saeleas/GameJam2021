@@ -28,4 +28,11 @@ public class FriendAIController : AIController
             }
         }
     }
+    protected new void OnTriggerEnter2D(Collider2D other) {
+        base.OnTriggerEnter2D(other);
+        if (other.gameObject.CompareTag("Player"))
+        {
+            other.GetComponent<FriendsFoundController>().AddFriend(this);
+        }
+    }
 }
