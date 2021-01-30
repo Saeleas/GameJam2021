@@ -37,8 +37,9 @@ public class ProjectileController : MonoBehaviour
         {
             if (collision.gameObject.CompareTag("Enemy"))
             {
-                Destroy(collision.gameObject.gameObject);
+                collision.gameObject.GetComponent<Animator>().SetBool("explode", true);
             }
         }
+        Destroy(gameObject);
     }
 }
