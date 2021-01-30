@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemyAIController : AIController
 {
+    public Animator animator;
     // Update is called once per frame
     void Update()
     {
@@ -32,7 +33,7 @@ public class EnemyAIController : AIController
     {
         if (other.gameObject.CompareTag("Player") || other.gameObject.GetComponent<ProjectileController>() != null)
         {
-            Destroy(gameObject);
+            animator.SetBool("explode", true);
         }
     }
     // protected new void OnTriggerEnter2D(Collider2D other)

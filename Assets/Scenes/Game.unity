@@ -5106,7 +5106,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &157674818
 GameObject:
@@ -5386,6 +5386,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: dd84572fc445de4319d63b9fe3d3c7fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  distances:
+  - {x: 0.75, y: 0.75}
 --- !u!4 &219264489
 Transform:
   m_ObjectHideFlags: 0
@@ -5404,7 +5406,7 @@ Transform:
   - {fileID: 820904550}
   - {fileID: 1311822993}
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 6
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &237685243
 GameObject:
@@ -5614,7 +5616,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &279877253
@@ -6263,7 +6265,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &626287818
@@ -6646,7 +6648,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &951938919
@@ -6678,7 +6680,7 @@ Transform:
   m_Children:
   - {fileID: 157674819}
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1001202706
 GameObject:
@@ -6722,7 +6724,7 @@ Transform:
   m_Children:
   - {fileID: 1301794881}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1076836528
 GameObject:
@@ -6879,7 +6881,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1115857643
@@ -6915,7 +6917,7 @@ Transform:
   - {fileID: 1076836529}
   - {fileID: 859885333}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1123802839
 GameObject:
@@ -7072,7 +7074,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!1 &1149343359
@@ -7263,6 +7265,71 @@ Transform:
   m_Father: {fileID: 219264489}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &1204108539
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 5609975164863792004, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_Name
+      value: entitySpawner
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -6.930502
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -5.628163
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792006, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: entity
+      value: 
+      objectReference: {fileID: 7584867593721531480, guid: dcb1ca5d32594db4389b91955ca0844f, type: 3}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: player
+      value: 
+      objectReference: {fileID: 219264481}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
 --- !u!1 &1220181792
 GameObject:
   m_ObjectHideFlags: 0
@@ -13661,7 +13728,7 @@ Transform:
   - {fileID: 1220181793}
   - {fileID: 1149343360}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &2012969047
 GameObject:
@@ -13747,7 +13814,7 @@ Transform:
   m_Children:
   - {fileID: 1757763774}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!60 &2012969050
 PolygonCollider2D:
