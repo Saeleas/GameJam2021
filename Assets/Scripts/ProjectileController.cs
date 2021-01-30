@@ -32,21 +32,17 @@ public class ProjectileController : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        //Debug.Log("Projectile collided with " + collision);
-        if (!collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Enemy"))
         {
-            if (collision.gameObject.CompareTag("Enemy"))
+            collision.gameObject.GetComponent<Animator>().SetBool("explode", true);
+            collision.gameObject.GetComponent<EnemyAIController>().shouldFollow = false;
+            foreach (Collider2D c in collision.gameObject.GetComponents<Collider2D>())
             {
-                collision.gameObject.GetComponent<Animator>().SetBool("explode", true);
-                collision.gameObject.GetComponent<EnemyAIController>().shouldFollow = false;
-                foreach (Collider2D c in collision.gameObject.GetComponents<Collider2D>())
-                {
-                    c.isTrigger = true;
-                }
-                foreach (Collider2D c in collision.gameObject.GetComponentsInChildren<Collider2D>())
-                {
-                    c.isTrigger = true;
-                }
+                c.isTrigger = true;
+            }
+            foreach (Collider2D c in collision.gameObject.GetComponentsInChildren<Collider2D>())
+            {
+                c.isTrigger = true;
             }
             Destroy(gameObject);
         }
