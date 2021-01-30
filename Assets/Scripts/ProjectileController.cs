@@ -9,11 +9,14 @@ public class ProjectileController : MonoBehaviour
     public SpriteRenderer spriteRenderer;
     public float lifetime = 0.6f;
     public Vector2 direction;
+    public Animator animator;
     // Start is called before the first frame update
     void Start()
     {
         spriteRenderer.sortingOrder = (int)(transform.position.y * -100);
         spriteRenderer.flipX = direction.x > 0.0f;
+        Debug.Log("up " +  (direction.y > 0.0f));
+        animator.SetBool("up", direction.y > 0.0f);
         body.AddForce(direction * force, ForceMode2D.Impulse);
     }
 

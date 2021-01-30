@@ -55,6 +55,7 @@ MonoBehaviour:
   spriteRenderer: {fileID: 4735089326330476814}
   lifetime: 0.6
   direction: {x: 0, y: 0}
+  animator: {fileID: 4099587652363813967}
 --- !u!50 &1499078930711111758
 Rigidbody2D:
   serializedVersion: 4
