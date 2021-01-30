@@ -15,9 +15,14 @@ public class EntitySpawnerController : MonoBehaviour
         for (int i = 0; i < amount; i++)
         {
             //GetComponent<Collider2D>()
-            AIController controller =  Instantiate(entity, GetComponent<Collider2D>().bounds.center, Quaternion.Euler(0,0,0)).GetComponent<AIController>();
+            Bounds bounds = GetComponent<Collider2D>().bounds;
+            Vector3 randomPosition = Random.insideUnitSphere;
+            randomPosition.Scale(bounds.size);
+            randomPosition.Scale(new Vector3(.5f, .5f));
+            AIController controller =  Instantiate(entity, bounds.center + randomPosition, Quaternion.Euler(0,0,0)).GetComponent<AIController>();
             controller.player = player;
             controller.speed = Random.Range(speed[0], speed[1]);
         }
+        Destroy(gameObject);
     }
 }
