@@ -14,10 +14,6 @@ public class InteractableComponent : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (!(animator.GetCurrentAnimatorStateInfo(0).normalizedTime > 1.0f))
-        {
-            Debug.Log("Animating dissolve");
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
