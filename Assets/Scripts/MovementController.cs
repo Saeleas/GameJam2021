@@ -1,5 +1,6 @@
 using System;
 using UnityEngine;
+using UnityEngine.Experimental.Rendering.Universal;
 using UnityEngine.SceneManagement;
 
 [RequireComponent(typeof(DynamicObjectRenderSort))]
@@ -19,7 +20,7 @@ public class MovementController : MonoBehaviour
     private SpriteRenderer spriteRenderer;
     private bool _canInteract;
     internal InteractableComponent interactable;
-
+    public Light2D headLight;
     public bool canInteract { get; set; }
     
     // Start is called before the first frame update
@@ -59,11 +60,13 @@ public class MovementController : MonoBehaviour
             animator.SetBool("headless", true);
             cooldownMs = COOLDOWN;
             animator.SetTrigger("Shot");
-            GameObject projectile = Instantiate(projectilePrefab, transform.position + (new Vector3(lastDirection.x, lastDirection.y, 0.0f) * projectileSpawnDistance) , Quaternion.identity);
-            ProjectileController controller = projectile.GetComponent<ProjectileController>();
-            controller.direction = lastDirection;
         }
-        
+
+        if (cooldownMs <= 0.0f)
+        {
+            headLight.enabled = true;
+        }
+
         if (Input.GetButtonDown("Fire2") && canInteract)
         {
             Debug.Log("Maybe interact?");
@@ -78,5 +81,13 @@ public class MovementController : MonoBehaviour
         {
             SceneManager.LoadScene("Game Over");
         }
+    }
+
+    public void shoot()
+    {
+        headLight.enabled = cooldownMs == 0.0f;
+        GameObject projectile = Instantiate(projectilePrefab, transform.position + (new Vector3(lastDirection.x, lastDirection.y, 0.0f) * projectileSpawnDistance), Quaternion.identity);
+        ProjectileController controller = projectile.GetComponent<ProjectileController>();
+        controller.direction = lastDirection;
     }
 }

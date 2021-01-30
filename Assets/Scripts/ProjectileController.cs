@@ -13,6 +13,7 @@ public class ProjectileController : MonoBehaviour
     void Start()
     {
         spriteRenderer.sortingOrder = (int)(transform.position.y * -100);
+        spriteRenderer.flipX = direction.x > 0.0f;
         body.AddForce(direction * force, ForceMode2D.Impulse);
     }
 

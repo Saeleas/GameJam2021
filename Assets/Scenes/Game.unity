@@ -5360,6 +5360,7 @@ MonoBehaviour:
   playerHealth: 3
   projectileSpawnDistance: 0.5
   animator: {fileID: 219264482}
+  headLight: {fileID: 1307207430}
 --- !u!114 &219264487
 MonoBehaviour:
   m_ObjectHideFlags: 0
