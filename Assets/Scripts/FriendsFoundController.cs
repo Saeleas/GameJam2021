@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class FriendsFoundController : MonoBehaviour
 {
+    public List<Vector2> distances = new List<Vector2>() {new Vector2(.75f, .75f)};
     private List<FriendAIController> friends = new List<FriendAIController>();
 
     public void AddFriend(FriendAIController friend)
@@ -15,7 +16,13 @@ public class FriendsFoundController : MonoBehaviour
                 friend.player = friends[friends.Count - 1].gameObject;
             }
             friends.Add(friend);
-            friends[0].distance = new Vector2(.75f, .75f);
+            for (int i = 0; i < distances.Count; i++)
+            {
+                if (friends.Count > i)
+                {
+                    friends[i].distance = distances[i];
+                }
+            }
         }
     }
 }
