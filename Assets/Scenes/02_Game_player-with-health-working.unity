@@ -6080,6 +6080,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 219264481}
     - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: timingInSeconds
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
       propertyPath: speed.Array.data[0]
       value: 3.5
       objectReference: {fileID: 0}
@@ -7373,6 +7377,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 219264481}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: timingInSeconds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
       propertyPath: speed.Array.data[0]
       value: 3.5
@@ -14431,6 +14439,10 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 219264481}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: timingInSeconds
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
       propertyPath: speed.Array.data[0]
       value: 3.5
