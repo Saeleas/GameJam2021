@@ -31,6 +31,7 @@ public class EnemyAIController : AIController
     }
     private void OnCollisionEnter2D(Collision2D other)
     {
+        Debug.Log($"{other.gameObject.tag}: {other.gameObject.CompareTag("Player")}");
         if (other.gameObject.CompareTag("Player") || other.gameObject.GetComponent<ProjectileController>() != null)
         {
             animator.SetBool("explode", true);
