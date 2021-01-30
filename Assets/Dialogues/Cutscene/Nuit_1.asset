@@ -1,0 +1,25 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbedc1c3134dc4bfab3c746d8a8aa0c3, type: 3}
+  m_Name: Nuit_1
+  m_EditorClassIdentifier: 
+  name: Nuit
+  isPlayer: 1
+  artwork: {fileID: 21300000, guid: 076c311ac927f46a3a8a06d633ceedd8, type: 3}
+  sentences:
+  - Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque quis facilisis
+    mauris. Proin quis pellentesque turpis. Sed id mi a.
+  - Phasellus tempus leo est, vel pretium sem condimentum in. Ut quis fringilla augue,
+    non euismod felis. Morbi velit orci, volutpat eget lectus in, ultrices commodo
+    libero.
+  - Fusce ac risus ante. Ut augue arcu, efficitur vel arcu lacinia, placerat eleifend
+    metus. Aenean ultricies in tortor sed porta. Suspendisse in tempor eros.
