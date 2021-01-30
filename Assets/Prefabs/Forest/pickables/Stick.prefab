@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 6586479857169514658}
   - component: {fileID: -8232274497637437528}
   m_Layer: 0
-  m_Name: pickable
+  m_Name: Stick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -146,6 +146,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839421cf2d9a0e4c87987218711dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 8300000, guid: 6796b5cad9183da4ebb8095136907d51, type: 3}
 --- !u!114 &6586479857169514658
 MonoBehaviour:
   m_ObjectHideFlags: 0
