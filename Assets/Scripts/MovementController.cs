@@ -43,7 +43,8 @@ public class MovementController : MonoBehaviour
         int y = Math.Abs(yAxis) > MOVE_THRESHOLD ? Math.Sign(yAxis) : 0;
         cooldownMs = Mathf.Clamp(cooldownMs - Time.deltaTime, 0.0f, float.MaxValue);
         transform.position += new Vector3(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0.0f);
-        lastDirection = new Vector2(x, y);
+        Vector2 curDir = new Vector2(x, y);
+        lastDirection = curDir != Vector2.zero ? curDir : lastDirection;
         spriteRenderer.flipX = x >= 0;
 
         //Debug.Log("x " + x + "y " + y);
