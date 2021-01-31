@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Diagnostics;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using Debug = UnityEngine.Debug;
 
 
@@ -12,12 +13,16 @@ public class DialogueTrigger : MonoBehaviour
     public Dialogue dialogue;
     public bool startOnLoad;
     public Animator animator;
+
+    public bool goToNextSceneOnEnd = true;
     
     private DialogueManager _manager;
     private Queue<Line> _lines;
+    private int _index;
     private void Awake()
     {
         Init();
+        _index = SceneManager.GetActiveScene().buildIndex;
     }
 
     public void Init()
@@ -59,12 +64,16 @@ public class DialogueTrigger : MonoBehaviour
         }
         else
         {
-            // Time.timeScale = 1f;
             container.SetActive(false);
             
             if (animator)
             {
                 animator.speed = 1f;
+            }
+
+            if (goToNextSceneOnEnd)
+            {
+                SceneManager.LoadScene(_index + 1);
             }
         }
     }

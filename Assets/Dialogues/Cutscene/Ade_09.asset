@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dbedc1c3134dc4bfab3c746d8a8aa0c3, type: 3}
+  m_Name: Ade_09
+  m_EditorClassIdentifier: 
+  name: Ade
+  isPlayer: 0
+  artwork: {fileID: 21300000, guid: 9132cba438270467a9b25dc0e47b4b5d, type: 3}
+  sentences:
+  - "why are you so scared? It\u2019s only a body! He can\u2019t eat you or... anything
+    else."
+  - The truth is that you Japanese people are way too much superstitious. Just relax
+    and enjoy life!
+  delay: 0
