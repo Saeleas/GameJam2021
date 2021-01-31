@@ -10,11 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: dbedc1c3134dc4bfab3c746d8a8aa0c3, type: 3}
-  m_Name: Friend_1
+  m_Name: Friend_2
   m_EditorClassIdentifier: 
   name: Friend 1
   isPlayer: 0
   artwork: {fileID: 21300000, guid: 79ce8ed19c0f945fda9357bf9eacec45, type: 3}
   sentences:
-  - You have found me! Thanks!
+  - Cool! You did it! You found me!
   delay: 0
