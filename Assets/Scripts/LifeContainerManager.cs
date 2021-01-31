@@ -48,7 +48,7 @@ public class LifeContainerManager : MonoBehaviour
         trans.anchoredPosition = new Vector2(0f, 0f);
 
         Image image = imgObject.AddComponent<Image>();
-        image.sprite = index <= _currentLife ? activeIcon : inactiveIcon;
+        image.sprite = index < _currentLife ? activeIcon : inactiveIcon;
         imgObject.transform.SetParent(transform);
         imgObject.transform.localPosition = new Vector3(-75 * index, 0, 0);
     }
