@@ -17,4 +17,4 @@ MonoBehaviour:
   artwork: {fileID: 21300000, guid: 6e7daf499e9ee4591bf2f81d1a36234c, type: 3}
   sentences:
   - We're finally here!
-  delay: 0
+  delay: 1

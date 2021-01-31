@@ -44,7 +44,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (_lines.Count > 0)
         {
-            Time.timeScale = 0f;
+            // Time.timeScale = 0f;
             container.SetActive(true);
             Line line = _lines.Dequeue();
             _manager.trigger = this;
@@ -59,7 +59,7 @@ public class DialogueTrigger : MonoBehaviour
         }
         else
         {
-            Time.timeScale = 1f;
+            // Time.timeScale = 1f;
             container.SetActive(false);
             
             if (animator)
