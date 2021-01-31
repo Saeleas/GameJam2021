@@ -77,7 +77,7 @@ public class MovementController : MonoBehaviour
         lifeContainer.SetCurrentLife(playerHealth);
         if (playerHealth <= 0)
         {
-            SceneManager.LoadScene("Game Over");
+            SceneManager.LoadScene("03_Game_over");
         }
     }
 
