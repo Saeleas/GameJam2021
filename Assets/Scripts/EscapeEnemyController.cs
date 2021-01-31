@@ -24,6 +24,7 @@ public class EscapeEnemyController : MonoBehaviour
             GameObject.FindGameObjectWithTag("Player").GetComponent<FriendsFoundController>().RemoveFriend(ai);
             ai.transform.position = spawners[Random.Range(0, spawners.Length)].transform.position;
             ai.shouldFollow = false;
+            gameObject.GetComponent<Animator>().SetBool("moving", false);
         }
     }
 }

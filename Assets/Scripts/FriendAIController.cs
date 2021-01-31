@@ -20,8 +20,8 @@ public class FriendAIController : AIController
         {
             Vector3 direction = player.transform.position - gameObject.transform.position;
             spriteRender.flipX = direction.x < 0.0f;
-            animator.SetBool("moving", direction != Vector3.zero); 
-            if (direction.x - distance.x >= 0)
+            animator.SetBool("moving", !(direction - distance).Equals(Vector3.zero) && !(distance - direction).Equals(Vector3.zero)); 
+            if (direction.x - distance.x > 0)
             {
                 gameObject.transform.position += new Vector3(speed * Time.deltaTime * (direction.x - distance.x), 0);
             }
@@ -29,7 +29,7 @@ public class FriendAIController : AIController
             {
                 gameObject.transform.position -= new Vector3(speed * Time.deltaTime * Mathf.Abs(direction.x + distance.x), 0);
             }
-            if (direction.y - distance.y >= 0)
+            if (direction.y - distance.y > 0)
             {
                 gameObject.transform.position += new Vector3(0, speed * Time.deltaTime * (direction.y - distance.y));
             }

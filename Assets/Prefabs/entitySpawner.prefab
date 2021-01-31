@@ -70,7 +70,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd21c13e164c9c68db7c529a9a7310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timingInSeconds: 60
+  timingInSeconds: 120
   player: {fileID: 0}
   entity: {fileID: 0}
   amount: 1
