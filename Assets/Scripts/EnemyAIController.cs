@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyAIController : AIController
 {
     public Animator animator;
+    public AudioClip audioClip;
     // Update is called once per frame
     void Update()
     {

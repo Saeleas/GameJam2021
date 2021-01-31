@@ -136,6 +136,7 @@ MonoBehaviour:
   distance: {x: 0, y: 0}
   shouldFollow: 0
   animator: {fileID: 5578509853317677628}
+  audioClip: {fileID: 8300000, guid: 94893ba32efe79e4dbb8b0989f79ba10, type: 3}
 --- !u!58 &3520997612177487870
 CircleCollider2D:
   m_ObjectHideFlags: 0

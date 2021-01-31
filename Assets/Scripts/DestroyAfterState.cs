@@ -22,6 +22,11 @@ public class DestroyAfterState : StateMachineBehaviour
         //Debug.Log(animator);
         //Debug.Log(stateInfo);
         //Debug.Log(layerIndex);
+        EnemyAIController enemy = animator.gameObject.GetComponent<EnemyAIController>();
+        if (enemy)
+        {
+            AudioSource.PlayClipAtPoint(enemy.audioClip, enemy.gameObject.transform.position, 3);
+        }
         Destroy(animator.gameObject);
     }
 
