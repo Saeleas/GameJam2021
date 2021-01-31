@@ -786,6 +786,14 @@ PrefabInstance:
       propertyPath: speed.Array.data[1]
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 20745d414972faa44931f3a66a896fd3, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
 --- !u!4 &1107158525 stripped
@@ -1282,7 +1290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1425453931
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1397,6 +1405,14 @@ PrefabInstance:
       propertyPath: speed.Array.data[1]
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: 9ba6abc014c0e6572b02d05a7b5f479a, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
 --- !u!4 &1498255882 stripped
@@ -1552,6 +1568,14 @@ PrefabInstance:
       propertyPath: speed.Array.data[1]
       value: 4.5
       objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5609975164863792007, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
+      propertyPath: dialogue.lines.Array.data[0]
+      value: 
+      objectReference: {fileID: 11400000, guid: af67bdd26eea84a94893a2ae36e52c5b, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 00f27b77e6dea21cfb914856103e3892, type: 3}
 --- !u!4 &1711756189 stripped
@@ -1690,7 +1714,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4102477742521380909, guid: 7628d9a2c7dfa4162b625539121732ff, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7628d9a2c7dfa4162b625539121732ff, type: 3}
@@ -1973,7 +1997,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5920084687576588142, guid: 3fb26c2e11d02ce78a57f8ae6cc8ace0, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8248761006892844644, guid: 3fb26c2e11d02ce78a57f8ae6cc8ace0, type: 3}
       propertyPath: m_Pivot.x
