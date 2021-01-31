@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5609975164863792007}
   m_Layer: 0
   m_Name: entitySpawner
-  m_TagString: Untagged
+  m_TagString: Spawner
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -70,11 +70,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 89cd21c13e164c9c68db7c529a9a7310, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  timingInSeconds: 60
+  timingInSeconds: 120
   player: {fileID: 0}
   entity: {fileID: 0}
   amount: 1
-  lines: []
+  dialogue:
+    lines: []
   speed:
   - 0.1
   - 0.5
