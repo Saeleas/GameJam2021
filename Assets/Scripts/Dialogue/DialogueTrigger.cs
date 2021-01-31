@@ -1,7 +1,9 @@
 using System;
 using System.Collections;
 using System.Collections.Generic;
+using System.Diagnostics;
 using UnityEngine;
+using Debug = UnityEngine.Debug;
 
 
 public class DialogueTrigger : MonoBehaviour
@@ -15,15 +17,20 @@ public class DialogueTrigger : MonoBehaviour
     private Queue<Line> _lines;
     private void Awake()
     {
+        Init();
+    }
+
+    public void Init()
+    {
         _manager = container.GetComponent<DialogueManager>();
         _lines = new Queue<Line>();
-
+        
         foreach (Line line in dialogue.lines)
         {
             _lines.Enqueue(line);
         }
     }
-
+    
     IEnumerator Start()
     {
         if (startOnLoad)
@@ -37,6 +44,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (_lines.Count > 0)
         {
+            Time.timeScale = 0f;
             container.SetActive(true);
             Line line = _lines.Dequeue();
             _manager.trigger = this;
@@ -51,6 +59,7 @@ public class DialogueTrigger : MonoBehaviour
         }
         else
         {
+            Time.timeScale = 1f;
             container.SetActive(false);
             
             if (animator)

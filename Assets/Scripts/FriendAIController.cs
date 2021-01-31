@@ -4,7 +4,6 @@ using UnityEngine;
 
 public class FriendAIController : AIController
 {
-
     private SpriteRenderer spriteRender;
     private Animator animator;
 
@@ -43,6 +42,8 @@ public class FriendAIController : AIController
         base.OnTriggerEnter2D(other);
         if (other.gameObject.CompareTag("Player"))
         {
+            DialogueTrigger trigger = GetComponent<DialogueTrigger>();
+            trigger.StartConversation();
             other.GetComponent<FriendsFoundController>().AddFriend(this);
         }
     }
