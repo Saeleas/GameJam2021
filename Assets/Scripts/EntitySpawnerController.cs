@@ -35,6 +35,7 @@ public class EntitySpawnerController : MonoBehaviour
                 {
                     DialogueTrigger trigger = friend.GetComponent<DialogueTrigger>();
                     trigger.dialogue = dialogue;
+                    trigger.goToNextSceneOnEnd = false;
                     trigger.Init();
                 }
             }

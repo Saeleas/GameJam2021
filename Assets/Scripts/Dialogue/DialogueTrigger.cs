@@ -14,7 +14,7 @@ public class DialogueTrigger : MonoBehaviour
     public bool startOnLoad;
     public Animator animator;
 
-    public bool goToNextSceneOnEnd = true;
+    public bool goToNextSceneOnEnd = false;
     
     private DialogueManager _manager;
     private Queue<Line> _lines;
@@ -70,9 +70,10 @@ public class DialogueTrigger : MonoBehaviour
             {
                 animator.speed = 1f;
             }
-
+            
             if (goToNextSceneOnEnd)
             {
+                
                 SceneManager.LoadScene(_index + 1);
             }
         }
