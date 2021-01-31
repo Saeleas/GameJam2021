@@ -17,6 +17,7 @@ public class DialogueManager : MonoBehaviour
     public Image playerArtworkImage;
     public Image npcArtworkImage;
     public Text sentenceText;
+    public AudioSource clickSound;
     
     private bool _isAnimating;
     private Coroutine _routine;
@@ -99,6 +100,7 @@ public class DialogueManager : MonoBehaviour
     }
     private void StartNextSentence()
     {
+        clickSound.Play();
         if (_sentences.Count > 0)
         {
             StartTyping();
@@ -110,6 +112,7 @@ public class DialogueManager : MonoBehaviour
     }
     public void HandleClick()
     {
+        clickSound.Play();
         if (_isAnimating)
         {
             StopTyping();
