@@ -5438,7 +5438,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   distances:
-  - {x: 0.75, y: 0.75}
+  - {x: 1, y: 1}
 --- !u!4 &219264489
 Transform:
   m_ObjectHideFlags: 0
@@ -7649,6 +7649,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839421cf2d9a0e4c87987218711dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!50 &1149343363
 Rigidbody2D:
   serializedVersion: 4
@@ -7914,6 +7915,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839421cf2d9a0e4c87987218711dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!50 &1220181796
 Rigidbody2D:
   serializedVersion: 4
@@ -8961,6 +8963,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839421cf2d9a0e4c87987218711dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!114 &1670157481
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -14990,6 +14993,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4839421cf2d9a0e4c87987218711dba7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  audioClip: {fileID: 0}
 --- !u!50 &2072101624
 Rigidbody2D:
   serializedVersion: 4
