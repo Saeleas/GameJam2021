@@ -23,6 +23,7 @@ public class MovementController : MonoBehaviour
     internal InteractableComponent interactable;
     public Light2D headLight;
     public bool canInteract { get; set; }
+    public bool canShoot = true;
     
     // Start is called before the first frame update
     void Start()
@@ -57,7 +58,7 @@ public class MovementController : MonoBehaviour
         animator.SetInteger("x", x);
         animator.SetInteger("y", y);
         animator.SetBool("headless", cooldownMs > 0.0f);
-        if (!PauseMenu.isPaused && Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f)
+        if (!PauseMenu.isPaused && Input.GetButtonDown("Fire1") && cooldownMs <= 0.0f && canShoot)
         {
             animator.SetBool("headless", true);
             cooldownMs = COOLDOWN;

@@ -10,15 +10,15 @@ public class DialogueManager : MonoBehaviour
     public DialogueTrigger trigger;
     [HideInInspector]
     public Line line;
-    [HideInInspector] 
+    [HideInInspector]
     public Animator animator;
-    
+
     public Text nameText;
     public Image playerArtworkImage;
     public Image npcArtworkImage;
     public Text sentenceText;
     public AudioSource clickSound;
-    
+
     private bool _isAnimating;
     private Coroutine _routine;
 
@@ -35,14 +35,18 @@ public class DialogueManager : MonoBehaviour
         }
         _isAnimating = false;
     }
-    
+
     public IEnumerator HandleStart()
     {
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().canShoot = false;
+        }
         if (animator)
         {
             animator.speed = 0;
         }
-        
+
         nameText.text = line.name;
 
         if (line.delay > 0)
@@ -53,17 +57,17 @@ public class DialogueManager : MonoBehaviour
             {
                 animator.speed = 1f;
             }
-            
+
             yield return new WaitForSeconds(line.delay);
-            
+
             if (animator)
             {
                 animator.speed = 0;
             }
-            
+
             gameObject.SetActive(true);
         }
-        
+
         if (line.isPlayer)
         {
             npcArtworkImage.gameObject.SetActive(false);
@@ -76,22 +80,22 @@ public class DialogueManager : MonoBehaviour
             npcArtworkImage.gameObject.SetActive(true);
             npcArtworkImage.sprite = line.artwork;
         }
-        
+
         _sentences = new Queue<string>();
         foreach (string sentence in line.sentences)
         {
             _sentences.Enqueue(sentence);
         }
-        
+
         StartTyping();
     }
-    
+
     private void StartTyping()
     {
         _sentence = _sentences.Dequeue();
         _routine = StartCoroutine(TypeSentence(_sentence));
     }
-    
+
     private void StopTyping()
     {
         _isAnimating = false;
@@ -120,6 +124,10 @@ public class DialogueManager : MonoBehaviour
         else
         {
             StartNextSentence();
+        }
+        if (GameObject.FindGameObjectWithTag("Player"))
+        {
+            GameObject.FindGameObjectWithTag("Player").GetComponent<MovementController>().canShoot = true;
         }
     }
 }
