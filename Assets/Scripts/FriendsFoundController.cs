@@ -5,7 +5,7 @@ using UnityEngine;
 public class FriendsFoundController : MonoBehaviour
 {
     public List<Vector2> distances = new List<Vector2>() { new Vector2(.75f, .75f) };
-    private List<FriendAIController> friends = new List<FriendAIController>();
+    public List<FriendAIController> friends = new List<FriendAIController>();
     public void RemoveFriend(FriendAIController ctx)
     {
         friends.Remove(ctx);
