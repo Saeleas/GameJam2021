@@ -42,19 +42,12 @@ public class MovementController : MonoBehaviour
         int x = Math.Abs(xAxis) > MOVE_THRESHOLD ? Math.Sign(xAxis) : 0;
         int y = Math.Abs(yAxis) > MOVE_THRESHOLD ? Math.Sign(yAxis) : 0;
         cooldownMs = Mathf.Clamp(cooldownMs - Time.deltaTime, 0.0f, float.MaxValue);
-        //Debug.Log("x " + x + "y " + y);
-        if (Math.Abs(x) > Math.Abs(y))
-        {
-            transform.position += new Vector3(x * speed * Time.deltaTime, 0.0f, 0.0f);
-            lastDirection = new Vector2(x, 0.0f);
-            spriteRenderer.flipX = x >= 0;
+        transform.position += new Vector3(x * speed * Time.deltaTime, y * speed * Time.deltaTime, 0.0f);
+        lastDirection = new Vector2(x, y);
+        spriteRenderer.flipX = x >= 0;
 
-        }
-        else if (Math.Abs(x) < Math.Abs(y))
-        {
-            transform.position += new Vector3(0.0f, y * speed * Time.deltaTime, 0.0f);
-            lastDirection = new Vector2(0.0f, y);
-        }
+        //Debug.Log("x " + x + "y " + y);
+
         animator.SetInteger("x", x);
         animator.SetInteger("y", y);
         animator.SetBool("headless", cooldownMs > 0.0f);
