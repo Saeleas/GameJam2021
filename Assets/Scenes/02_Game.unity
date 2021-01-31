@@ -8497,28 +8497,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 7270020733794159636, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
-      propertyPath: DopplerLevel
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270020733794159636, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
-      propertyPath: panLevelCustomCurve.m_Curve.Array.data[0].value
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 7270020734188467504, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
       propertyPath: m_Name
       value: river
       objectReference: {fileID: 0}
     - target: {fileID: 7270020734188467505, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
       propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270020734188467505, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7270020734188467505, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
-      propertyPath: m_LocalScale.y
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7270020734188467505, guid: f048d59779bcfcc49a9525c90bbabca5, type: 3}
