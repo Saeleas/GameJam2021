@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 617864205547301504}
   - component: {fileID: 617864205547301511}
   - component: {fileID: 617864205547301510}
+  - component: {fileID: 3854721133331002205}
+  - component: {fileID: 7876663744338632091}
   m_Layer: 0
   m_Name: Bush_02
   m_TagString: Untagged
@@ -169,6 +171,56 @@ PolygonCollider2D:
       - {x: 2.1014795, y: -0.780478}
       - {x: 2.2334225, y: -0.51004076}
       - {x: 2.1758425, y: 0.11650729}
+--- !u!114 &3854721133331002205
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617864205547301509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+--- !u!114 &7876663744338632091
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 617864205547301509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 0
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -2.1706893, y: -1.6162167, z: 0}
+  - {x: -0.58986473, y: -1.4510665, z: 0}
+  - {x: 0.3303237, y: -2.3712554, z: 0}
+  - {x: 0.4364996, y: -1.6398234, z: 0}
+  - {x: 2.4774308, y: -1.9701471, z: 0}
+  - {x: 1.8167825, y: -1.3448911, z: 0}
+  - {x: 2.1235123, y: -0.9083915, z: 0}
+  - {x: 2.0763106, y: -0.22413635, z: 0}
+  - {x: 2.194296, y: 0.75502634, z: 0}
+  - {x: 1.6870008, y: 1.4746492, z: 0}
+  - {x: -0.047189236, y: 2.08812, z: 0}
+  - {x: -1.4274721, y: 2.08812, z: 0}
+  - {x: -1.9819329, y: 1.356677, z: 0}
+  - {x: -1.8993635, y: 0.2713375, z: 0}
+  - {x: -1.179729, y: -1.1443372, z: 0}
+  m_ShapePathHash: 1793914354
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -248544
 --- !u!1 &617864206183631741
 GameObject:
   m_ObjectHideFlags: 0

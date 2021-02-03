@@ -57,6 +57,8 @@ GameObject:
   m_Component:
   - component: {fileID: 852327000520870115}
   - component: {fileID: 852327000520870114}
+  - component: {fileID: 1106460692}
+  - component: {fileID: 1106460693}
   m_Layer: 0
   m_Name: Square
   m_TagString: Untagged
@@ -130,6 +132,47 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!114 &1106460692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852327000520870112}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 0
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -0.1656121, y: -0.41285926, z: 0}
+  - {x: -0.011732937, y: -0.49157044, z: 0}
+  - {x: 0.19030869, y: -0.39317286, z: 0}
+  - {x: 0.1969113, y: -0.2550503, z: 0}
+  - {x: 0.09586632, y: -0.20678866, z: 0}
+  - {x: -0.055303775, y: -0.24905677, z: 0}
+  m_ShapePathHash: 1755280068
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -61822
+--- !u!114 &1106460693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 852327000520870112}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &852327000609279248
 GameObject:
   m_ObjectHideFlags: 0
@@ -326,6 +369,7 @@ MonoBehaviour:
   animator: {fileID: 852327000817156238}
   lifeContainer: {fileID: 0}
   headLight: {fileID: 852327001901863530}
+  canShoot: 1
 --- !u!114 &852327000817156233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -419,6 +463,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   distances:
   - {x: 0.9, y: 0.9}
+  friends: []
 --- !u!82 &852327000817156230
 AudioSource:
   m_ObjectHideFlags: 0
@@ -5367,14 +5412,14 @@ MonoBehaviour:
   m_FalloffIntensity: 0.17
   m_Color: {r: 0.9245283, g: 0.7762687, b: 0.082858644, a: 1}
   m_Intensity: 0.9
-  m_LightVolumeOpacity: 0.16
+  m_LightVolumeOpacity: 0.21
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
   m_UseNormalMap: 0
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
+  m_ShadowIntensity: 0.2
+  m_ShadowVolumeIntensity: 0.25
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
   m_PointLightInnerRadius: 0
@@ -5415,7 +5460,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 852327001939190268}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -5436,22 +5481,22 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_LightType: 3
   m_BlendStyleIndex: 0
-  m_FalloffIntensity: 0.45
+  m_FalloffIntensity: 0.54
   m_Color: {r: 0.81470275, g: 0.8490394, b: 0.8679245, a: 1}
-  m_Intensity: 0.6
-  m_LightVolumeOpacity: 0.3
+  m_Intensity: 0.4
+  m_LightVolumeOpacity: 0.35
   m_ApplyToSortingLayers: 00000000
   m_LightCookieSprite: {fileID: 0}
-  m_UseNormalMap: 0
+  m_UseNormalMap: 1
   m_LightOrder: 0
   m_AlphaBlendOnOverlap: 0
-  m_ShadowIntensity: 0
-  m_ShadowVolumeIntensity: 0
+  m_ShadowIntensity: 0.2
+  m_ShadowVolumeIntensity: 0.25
   m_PointLightInnerAngle: 360
   m_PointLightOuterAngle: 360
-  m_PointLightInnerRadius: 0
-  m_PointLightOuterRadius: 2
-  m_PointLightDistance: 3
+  m_PointLightInnerRadius: 0.35
+  m_PointLightOuterRadius: 1.26
+  m_PointLightDistance: 4
   m_PointLightQuality: 1
   m_ShapeLightParametricSides: 5
   m_ShapeLightParametricAngleOffset: 0

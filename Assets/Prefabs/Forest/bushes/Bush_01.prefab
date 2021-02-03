@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 6698279110717927880}
   - component: {fileID: 6698279110717927881}
   - component: {fileID: 6698279110717927886}
+  - component: {fileID: 5109716212186949691}
+  - component: {fileID: 6535718253503965084}
   m_Layer: 0
   m_Name: Bush_01
   m_TagString: Untagged
@@ -231,3 +233,52 @@ PolygonCollider2D:
       - {x: -0.034483876, y: -0.9639084}
       - {x: 0.03781625, y: -0.937243}
       - {x: 0.14068961, y: -0.92712444}
+--- !u!114 &5109716212186949691
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698279110717927884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -0.53434616, y: -0.9654385, z: 0}
+  - {x: 0.59339947, y: -1.0008707, z: 0}
+  - {x: 0.45471436, y: -0.82084835, z: 0}
+  - {x: 0.6732134, y: -0.6909297, z: 0}
+  - {x: 0.6082569, y: -0.51967365, z: 0}
+  - {x: 0.45757416, y: -0.45185384, z: 0}
+  - {x: 0.31298333, y: -0.40747127, z: 0}
+  - {x: 0.1358244, y: -0.38384986, z: 0}
+  - {x: -0.07676891, y: -0.40747142, z: 0}
+  - {x: -0.25983575, y: -0.41928205, z: 0}
+  - {x: -0.41337824, y: -0.41337675, z: 0}
+  - {x: -0.6023508, y: -0.5019574, z: 0}
+  - {x: -0.75589114, y: -0.64368683, z: 0}
+  - {x: -0.40156677, y: -0.8385646, z: 0}
+  m_ShapePathHash: 557507916
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 879540
+--- !u!114 &6535718253503965084
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6698279110717927884}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0

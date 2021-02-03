@@ -10,8 +10,10 @@ GameObject:
   m_Component:
   - component: {fileID: 6650770049950502761}
   - component: {fileID: 6650770049950502762}
+  - component: {fileID: 5043791800810375095}
+  - component: {fileID: 3243505734598945274}
   m_Layer: 0
-  m_Name: grass
+  m_Name: Grass_01
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -51,6 +53,50 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5043791800810375095
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650770049950502763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 0
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 1
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -0.21583986, y: -0.38144314, z: 0}
+  - {x: -0.035227783, y: -0.49343032, z: 0}
+  - {x: 0.23032692, y: -0.4622665, z: 0}
+  - {x: 0.30917484, y: -0.36066693, z: 0}
+  - {x: 0.3009469, y: -0.27921316, z: 0}
+  - {x: 0.18048821, y: -0.21504876, z: 0}
+  - {x: 0.09720148, y: -0.2774912, z: 0}
+  - {x: 0.006417997, y: -0.26304555, z: 0}
+  - {x: -0.12995589, y: -0.2811235, z: 0}
+  m_ShapePathHash: -2066518152
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 876626
+--- !u!114 &3243505734598945274
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6650770049950502763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &6650770051200417939
 GameObject:
   m_ObjectHideFlags: 0

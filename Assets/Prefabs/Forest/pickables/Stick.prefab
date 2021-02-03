@@ -16,6 +16,7 @@ GameObject:
   - component: {fileID: 6586479857169514658}
   - component: {fileID: -8232274497637437528}
   - component: {fileID: 2588203554335072621}
+  - component: {fileID: 213678859801316489}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -188,3 +189,29 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: -1
+--- !u!114 &213678859801316489
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6586479857169514664}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -0.3232825, y: -2.5383658, z: 0}
+  - {x: -0.090752676, y: -0.59051013, z: 0}
+  - {x: -0.019822974, y: 0.9958514, z: 0}
+  - {x: -0.27663285, y: 2.5838978, z: 0}
+  m_ShapePathHash: -2108221696
+  m_Mesh: {fileID: 0}
+  m_InstanceId: -2343748

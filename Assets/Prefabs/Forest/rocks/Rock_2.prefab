@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 2215753497188038665}
   - component: {fileID: 2215753497188038662}
   - component: {fileID: 2215753497188038663}
+  - component: {fileID: 6924281987177695414}
+  - component: {fileID: 2450627633789670308}
   m_Layer: 0
   m_Name: Rock_2
   m_TagString: Untagged
@@ -197,3 +199,51 @@ PolygonCollider2D:
       - {x: 2.2334225, y: -0.51004076}
       - {x: 2.4024675, y: -0.40647244}
       - {x: 2.1027424, y: -0.13608074}
+--- !u!114 &6924281987177695414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215753497188038660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -2.276865, y: -0.5072713, z: 0}
+  - {x: -1.7342016, y: -0.9083915, z: 0}
+  - {x: -0.94378316, y: -1.0617561, z: 0}
+  - {x: -0.18875664, y: -1.0617561, z: 0}
+  - {x: 1.1443372, y: -0.6724453, z: 0}
+  - {x: 2.43023, y: -0.36570406, z: 0}
+  - {x: 1.462864, y: -0.2713375, z: 0}
+  - {x: 0.61344707, y: -0.54268694, z: 0}
+  - {x: 0, y: -0.24774313, z: 0}
+  - {x: -0.4247024, y: -0.15336418, z: 0}
+  - {x: -1.1325397, y: -0.18875647, z: 0}
+  - {x: -1.6280142, y: -0.18876839, z: 0}
+  - {x: -2.1117148, y: -0.16516209, z: 0}
+  m_ShapePathHash: -639250515
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 827388
+--- !u!114 &2450627633789670308
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2215753497188038660}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0

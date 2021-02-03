@@ -13,6 +13,8 @@ GameObject:
   - component: {fileID: 4073867310679312039}
   - component: {fileID: 4073867310679312038}
   - component: {fileID: 4073867310679312037}
+  - component: {fileID: -8163465682732915603}
+  - component: {fileID: 6044616567229049539}
   m_Layer: 0
   m_Name: Tree_3
   m_TagString: Untagged
@@ -165,6 +167,64 @@ PolygonCollider2D:
       - {x: 3.7268796, y: -13.127573}
       - {x: 3.8835993, y: -11.543721}
       - {x: 4.40548, y: -10.211947}
+--- !u!114 &-8163465682732915603
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073867310679312043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7db70e0ea77f5ac47a8f4565a9406397, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
+  m_HasRenderer: 1
+  m_UseRendererSilhouette: 1
+  m_CastsShadows: 1
+  m_SelfShadows: 0
+  m_ApplyToSortingLayers: 31281c0900000000
+  m_ShapePath:
+  - {x: -6.2112303, y: -13.818697, z: 0}
+  - {x: 3.9021451, y: -13.258917, z: 0}
+  - {x: 4.671839, y: -8.712379, z: 0}
+  - {x: 3.148752, y: -6.997228, z: 0}
+  - {x: -0.3498614, y: -5.8776717, z: 0}
+  - {x: -2.5190024, y: -5.107977, z: 0}
+  - {x: -0.7696953, y: -2.169141, z: 0}
+  - {x: 6.5773954, y: -2.519002, z: 0}
+  - {x: 6.5773954, y: 1.7493073, z: 0}
+  - {x: 1.9592242, y: 3.0787816, z: 0}
+  - {x: 2.3790572, y: 7.8368964, z: 0}
+  - {x: 0.5597781, y: 11.545427, z: 0}
+  - {x: -2.5889761, y: 12.385093, z: 0}
+  - {x: -5.8776727, y: 10.355898, z: 0}
+  - {x: -1.9592249, y: 6.997229, z: 0}
+  - {x: -2.5889752, y: 3.2187252, z: 0}
+  - {x: -6.7873125, y: 3.1487525, z: 0}
+  - {x: -6.927257, y: 0.34986115, z: 0}
+  - {x: -3.078781, y: -1.9592235, z: 0}
+  - {x: -4.8280883, y: -5.667755, z: 0}
+  - {x: 1.1195565, y: -8.046813, z: 0}
+  - {x: 0.20991604, y: -9.936065, z: 0}
+  - {x: -2.2927835, y: -10.531659, z: 0}
+  m_ShapePathHash: -413621231
+  m_Mesh: {fileID: 0}
+  m_InstanceId: 1133298
+--- !u!114 &6044616567229049539
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4073867310679312043}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 38f48a8d66b2adc46887f23a3a88ac01, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_ShadowGroup: 0
 --- !u!1 &4073867311373723804
 GameObject:
   m_ObjectHideFlags: 0
